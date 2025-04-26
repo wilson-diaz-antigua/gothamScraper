@@ -1,107 +1,44 @@
 [
     {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4576309-division-3-7-power-b-d--w--open-play-apr-14",
-        "title": "Division 3-7, Power B-D, & W  Open Play (Apr 14)",
-        "start_date": "Apr 14 '25",
-        "location": "The Post (Knickerbocker)",
-        "location_link": "https://gothamvolleyball.leagueapps.com/location/258392",
-        "start_time": "8:00pm",
-        "end_time": "11:00pm"
+        "link": "https://gothamvolleyball.leagueapps.com/events/4592048-division-8-11-power-e-f--w2-open-play-apr-25",
+        "title": "Division 8-11, Power E-F, & W2 Open Play (Apr 25)",
+        "start_date": "Apr 25 '25",
+        "location": "Howe",
+        "location_link": "https://gothamvolleyball.leagueapps.com/location/170043",
+        "start_time": "6:30pm",
+        "end_time": "9:30pm"
     },
     {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4576310-division-7-10-power-d-e--w2-open-play-apr-14",
-        "title": "Division 7-10, Power D-E, & W2 Open Play (Apr 14)",
-        "start_date": "Apr 14 '25",
-        "location": "Rustin - West/Red Gym",
-        "location_link": "https://gothamvolleyball.leagueapps.com/location/267325",
-        "start_time": "7:30pm",
-        "end_time": "10:30pm"
-    },
-    {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4576312-division-9-11-power-f-h-w3--power-play-open-play-apr-14",
-        "title": "Division 9-11, Power F-H, W3, & Power Play Open Play (Apr 14)",
-        "start_date": "Apr 14 '25",
-        "location": "Rustin - East/Blue Gym",
-        "location_link": "https://gothamvolleyball.leagueapps.com/location/267324",
-        "start_time": "7:30pm",
-        "end_time": "10:30pm"
-    },
-    {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4540065-division-6-9-power-c-e--w2--open-play-mar-10",
-        "title": "Division 6-9, Power C-E, & W2  Open Play (Mar 10)",
-        "start_date": "Mar 10 '25",
-        "location": "The Post (Knickerbocker)",
-        "location_link": "https://gothamvolleyball.leagueapps.com/location/258392",
-        "start_time": "8:00pm",
-        "end_time": "11:00pm"
-    },
-    {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4540064-division-10-11-power-g--w3-open-play-mar-10",
-        "title": "Division 10-11, Power G & W3 Open Play (Mar 10)",
-        "start_date": "Mar 10 '25",
+        "link": "https://gothamvolleyball.leagueapps.com/events/4598261-division-3-7-power-b-d--w-open-play-apr-28",
+        "title": "Division 3-7, Power B-D, & W Open Play (Apr 28)",
+        "start_date": "Apr 28 '25",
         "location": "Lab",
         "location_link": "https://gothamvolleyball.leagueapps.com/location/170049",
         "start_time": "8:00pm",
         "end_time": "11:00pm"
     },
     {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4542159-division-10-11-power-e-h-w3--power-play-open-play-mar-31",
-        "title": "Division 10-11, Power E-H, W3, & Power-Play Open Play (Mar 31)",
-        "start_date": "Mar 31 '25",
+        "link": "https://gothamvolleyball.leagueapps.com/events/4598263-division-8-11-power-e-g--w2-open-play-apr-28",
+        "title": "Division 8-11, Power E-G, & W2 Open Play (Apr 28)",
+        "start_date": "Apr 28 '25",
         "location": "The Post (Knickerbocker)",
         "location_link": "https://gothamvolleyball.leagueapps.com/location/258392",
         "start_time": "8:00pm",
         "end_time": "11:00pm"
     },
     {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4576286-division-6-9-power-c-d--w2-open-play-apr-2",
-        "title": "Division 6-9, Power C-D, & W2 Open Play (Apr 2)",
-        "start_date": "Apr 2 '25",
+        "link": "https://gothamvolleyball.leagueapps.com/events/4598264-division-10-11-power-e-h-w3--power-play-open-play-apr-28",
+        "title": "Division 10-11, Power E-H, W3, & Power-Play Open Play (Apr 28)",
+        "start_date": "Apr 28 '25",
         "location": "Rustin - East/Blue Gym",
         "location_link": "https://gothamvolleyball.leagueapps.com/location/267324",
         "start_time": "7:30pm",
         "end_time": "10:30pm"
     },
     {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4576295-division-3-7-power-c-d-w-open-play-apr-7",
-        "title": "Division 3-7, Power C-D, W Open Play (Apr 7)",
-        "start_date": "Apr 7 '25",
-        "location": "Rustin - East/Blue Gym",
-        "location_link": "https://gothamvolleyball.leagueapps.com/location/267324",
-        "start_time": "7:30pm",
-        "end_time": "10:30pm"
-    },
-    {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4576292-division-7-10-power-d-e--w2-open-play-apr-7",
-        "title": "Division 7-10, Power D-E, & W2 Open Play (Apr 7)",
-        "start_date": "Apr 7 '25",
-        "location": "The Post (Knickerbocker)",
-        "location_link": "https://gothamvolleyball.leagueapps.com/location/258392",
-        "start_time": "8:00pm",
-        "end_time": "11:00pm"
-    },
-    {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4576306-division-6-9-power-c-d--w2-open-play-apr-9",
-        "title": "Division 6-9, Power C-D, & W2 Open Play (Apr 9)",
-        "start_date": "Apr 9 '25",
-        "location": "Howe",
-        "location_link": "https://gothamvolleyball.leagueapps.com/location/170043",
-        "start_time": "6:30pm",
-        "end_time": "9:30pm"
-    },
-    {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4576308-division-8-9-power-e-f--w2-open-play-apr-10",
-        "title": "Division 8-9, Power E-F, & W2 Open Play (Apr 10)",
-        "start_date": "Apr 10 '25",
-        "location": "Howe",
-        "location_link": "https://gothamvolleyball.leagueapps.com/location/170043",
-        "start_time": "6:30pm",
-        "end_time": "9:30pm"
-    },
-    {
-        "link": "https://gothamvolleyball.leagueapps.com/events/4576307-division-10-11-power-g--w3-open-play-apr-10",
-        "title": "Division 10-11, Power G & W3 Open Play (Apr 10)",
-        "start_date": "Apr 10 '25",
+        "link": "https://gothamvolleyball.leagueapps.com/events/4598265-division-7-10-power-d-f--w2--open-play-apr-29",
+        "title": "Division 7-10, Power D-F, & W2  Open Play (Apr 29)",
+        "start_date": "Apr 29 '25",
         "location": "Lab",
         "location_link": "https://gothamvolleyball.leagueapps.com/location/170049",
         "start_time": "8:00pm",

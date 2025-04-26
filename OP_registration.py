@@ -3,7 +3,9 @@ import os
 import re
 from datetime import datetime
 
+import click
 import dateutil.parser
+import inquirer
 from bs4 import BeautifulSoup
 from icalendar import Calendar, Event
 from playwright.sync_api import Playwright, expect, sync_playwright
@@ -11,7 +13,13 @@ from playwright.sync_api import Playwright, expect, sync_playwright
 email = os.getenv("GOTHAM_EMAIL")
 password = os.getenv("GOTHAM_PASSWORD")
 signature = os.getenv("GOTHAM_SIGNATURE")
-url = "https://gothamvolleyball.leagueapps.com/events/4576309-division-3-7-power-b-d--w--open-play-apr-14"
+url = "https://gothamvolleyball.leagueapps.com/events/4598263-division-8-11-power-e-g--w2-open-play-apr-28"
+positions = [
+    "Setter",
+    "Outside",
+    "Middle",
+    "Opposite",
+]
 
 
 def run(playwright: Playwright) -> None:
@@ -24,14 +32,11 @@ def run(playwright: Playwright) -> None:
     page.goto(url)
 
     page.wait_for_selector("iframe")
-    page.locator("#monolith-iframe").content_frame.get_by_role(
-        "link", name="Register"
-    ).click()
-    page.locator("#monolith-iframe").content_frame.locator("#reg-fa").click()
-    page.get_by_role("textbox", name="Email").click()
-    page.get_by_role("textbox", name="Email").fill(email)
-    page.get_by_role("textbox", name="Password").click()
-    page.get_by_role("textbox", name="Password").fill(password)
+    framePage = page.frame_locator("#monolith-iframe")
+
+    framePage.get_by_role("link", name="Register").click()
+    framePage.locator("#reg-fa").click()
+    page.wait_for_timeout(2000)
     page.get_by_role("link", name="Sign in with LeagueApps").click()
 
     page.get_by_role("textbox", name="Email").click()
@@ -39,34 +44,18 @@ def run(playwright: Playwright) -> None:
     page.get_by_role("textbox", name="Password").click()
     page.get_by_role("textbox", name="Password").fill(password)
     page.get_by_role("button", name="Sign in with LeagueApps").click()
-    page.locator("#monolith-iframe").content_frame.locator(
-        'input[name="prop_36646239"]'
-    ).check()
-    page.locator("#monolith-iframe").content_frame.get_by_role("checkbox").nth(
-        3
-    ).check()
+    framePage.locator('input[type="checkbox"][value="I am eligible"]').check()
+    framePage.locator(f'input[type="checkbox"][value={positions[0]}]').check()
 
-    page.locator("#monolith-iframe").content_frame.get_by_text(
-        "Next", exact=True
-    ).click()
-    page.locator("#monolith-iframe").content_frame.get_by_role(
-        "tab", name=" I have read and accept the"
-    ).locator("label").click()
-    page.locator("#monolith-iframe").content_frame.get_by_role(
-        "tab",
-        name=" I have read and accept the Refund/Credit Policy terms and conditions",
-    ).locator("label").click()
-    page.locator("#monolith-iframe").content_frame.get_by_role(
-        "tab",
-        name=" I have read and accept the Photo and video release terms and conditions",
-    ).locator("label").click()
-    page.locator("#monolith-iframe").content_frame.locator(
-        "#electronicSignature"
-    ).click()
-    page.locator("#monolith-iframe").content_frame.locator("#electronicSignature").fill(
-        signature
-    )
-    page.locator("#monolith-iframe").content_frame.locator("#register-submit").click()
+    framePage.get_by_text("Next", exact=True).click()
+
+    framePage.locator('label[for="waiver-accept-cb-0"]').check()
+    framePage.locator('label[for="waiver-accept-cb-1"]').check()
+    framePage.locator('label[for="waiver-accept-cb-2"]').check()
+
+    framePage.locator("#electronicSignature").click()
+    framePage.locator("#electronicSignature").fill(signature)
+    framePage.locator("#register-submit").click()
 
     # ---------------------
     context.close()

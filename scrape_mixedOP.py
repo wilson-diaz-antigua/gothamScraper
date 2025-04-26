@@ -1,12 +1,32 @@
 #!/usr/bin/env python3
 import json
+import logging
+import os
 import re
+import time
 from datetime import datetime
 
 import dateutil.parser
+import schedule
 from bs4 import BeautifulSoup
 from icalendar import Calendar, Event
 from playwright.sync_api import sync_playwright
+
+# Create logs directory if it doesn't exist
+os.makedirs("logs", exist_ok=True)
+
+# Generate a timestamped log file name
+log_filename = datetime.now().strftime("logs/log_%Y-%m-%d_%H-%M-%S.log")
+
+# Configure logging
+logging.basicConfig(
+    level=logging.DEBUG,  # Could also use INFO, WARNING, ERROR, CRITICAL
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    handlers=[
+        logging.FileHandler(log_filename),
+        logging.StreamHandler(),  # Print logs to console
+    ],
+)
 
 
 def extract_event_details(li, context):
@@ -125,5 +145,33 @@ def main():
         f.write(cal.to_ical())
 
 
-if __name__ == "__main__":
-    main()
+def test():
+    return "Test function executed successfully!"
+
+
+def check_calendar_diff():
+    """Check for differences in the calendar file before and after running main()."""
+    try:
+        with open("my_calendar.ics", "rb") as f:
+            old_calendar = f.read()
+    except FileNotFoundError:
+        logging.warning("my_calendar.ics not found, assuming no prior calendar.")
+        old_calendar = b""
+
+    main()  # Trigger the main function to update the calendar
+
+    with open("my_calendar.ics", "rb") as f:
+        new_calendar = f.read()
+
+    if old_calendar != new_calendar:
+        logging.info("Calendar has been updated with new events.")
+
+    else:
+        logging.info("No changes detected in the cal1endar.")
+
+
+schedule.every().day.at("11:30").do(check_calendar_diff)
+while True:
+    logging.info("schedule running... ")
+    schedule.run_pending()
+    time.sleep(30 * 60)  # Sleep for 30 minutes
