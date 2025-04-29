@@ -9,7 +9,14 @@ license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-
+'beautifulsoup4',
+'click',
+'dateutil',
+'dotenv',
+'icalendar',
+'InquirerPy',
+'playwright',
+'schedule',
 ]
 
 

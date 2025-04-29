@@ -1,4 +1,3 @@
-import json
 import logging
 import os
 from datetime import datetime
@@ -243,4 +242,5 @@ def register_for_open_play():
 
 
 if __name__ == "__main__":
-    register_for_open_play()
+    schedule.every().friday.at("12:00").do(register_for_open_play)
+    schedule.every().friday.at("12:03").do(clear_url)
