@@ -170,7 +170,7 @@ def check_calendar_diff():
         logging.info("No changes detected in the cal1endar.")
 
 
-schedule.every().day.at("11:30").do(check_calendar_diff)
+schedule.every().day.at("14:10").do(check_calendar_diff)
 while True:
     logging.info("schedule running... ")
     schedule.run_pending()
