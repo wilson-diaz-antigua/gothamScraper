@@ -1,52 +1,42 @@
 BEGIN:VCALENDAR
 BEGIN:VEVENT
-SUMMARY:Division 8-11\, Power E-F\, & W2 Open Play (Apr 25)
-DTSTART:20250425T183000
-DTEND:20250425T213000
-DESCRIPTION:Location link: https://gothamvolleyball.leagueapps.com/locatio
- n/170043
-LOCATION:Howe
-URL:https://gothamvolleyball.leagueapps.com/events/4592048-division-8-11-p
- ower-e-f--w2-open-play-apr-25
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Division 3-7\, Power B-D\, & W Open Play (Apr 28)
-DTSTART:20250428T200000
-DTEND:20250428T230000
+SUMMARY:Division 3-7\, Power B-D\, & W Open Play (May 5)
+DTSTART:20250505T200000
+DTEND:20250505T230000
 DESCRIPTION:Location link: https://gothamvolleyball.leagueapps.com/locatio
  n/170049
 LOCATION:Lab
-URL:https://gothamvolleyball.leagueapps.com/events/4598261-division-3-7-po
- wer-b-d--w-open-play-apr-28
+URL:https://gothamvolleyball.leagueapps.com/events/4604341-division-3-7-po
+ wer-b-d--w-open-play-may-5
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Division 8-11\, Power E-G\, & W2 Open Play (Apr 28)
-DTSTART:20250428T200000
-DTEND:20250428T230000
+SUMMARY:Division 9-11\, Power F-H\, W2-3\, & Power Play Open Play (May 5)
+DTSTART:20250505T200000
+DTEND:20250505T230000
 DESCRIPTION:Location link: https://gothamvolleyball.leagueapps.com/locatio
  n/258392
 LOCATION:The Post (Knickerbocker)
-URL:https://gothamvolleyball.leagueapps.com/events/4598263-division-8-11-p
- ower-e-g--w2-open-play-apr-28
+URL:https://gothamvolleyball.leagueapps.com/events/4604342-division-9-11-p
+ ower-f-h-w2-3--power-play-open-play-may-5
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Division 10-11\, Power E-H\, W3\, & Power-Play Open Play (Apr 28)
-DTSTART:20250428T193000
-DTEND:20250428T223000
+SUMMARY:Division 6-9\, Power C-E\, & W-W2 Open Play (May 7)
+DTSTART:20250507T183000
+DTEND:20250507T213000
 DESCRIPTION:Location link: https://gothamvolleyball.leagueapps.com/locatio
- n/267324
-LOCATION:Rustin - East/Blue Gym
-URL:https://gothamvolleyball.leagueapps.com/events/4598264-division-10-11-
- power-e-h-w3--power-play-open-play-apr-28
+ n/170043
+LOCATION:Howe
+URL:https://gothamvolleyball.leagueapps.com/events/4604344-division-6-9-po
+ wer-c-e--w-w2-open-play-may-7
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Division 7-10\, Power D-F\, & W2  Open Play (Apr 29)
-DTSTART:20250429T200000
-DTEND:20250429T230000
+SUMMARY:Division 10-11\, Power F-H\, W3\, & Power-Play Open Play (May 7)
+DTSTART:20250507T200000
+DTEND:20250507T230000
 DESCRIPTION:Location link: https://gothamvolleyball.leagueapps.com/locatio
  n/170049
 LOCATION:Lab
-URL:https://gothamvolleyball.leagueapps.com/events/4598265-division-7-10-p
- ower-d-f--w2--open-play-apr-29
+URL:https://gothamvolleyball.leagueapps.com/events/4604347-division-10-11-
+ power-f-h-w3--power-play-open-play-may-7
 END:VEVENT
 END:VCALENDAR

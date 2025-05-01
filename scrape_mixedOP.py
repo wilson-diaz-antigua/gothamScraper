@@ -11,12 +11,16 @@ import schedule
 from bs4 import BeautifulSoup
 from icalendar import Calendar, Event
 from playwright.sync_api import sync_playwright
+from pync import Notifier
 
+path = os.path.dirname(__file__)
 # Create logs directory if it doesn't exist
-os.makedirs("logs", exist_ok=True)
+os.makedirs(os.path.join(path, "logs"), exist_ok=True)
 
 # Generate a timestamped log file name
-log_filename = datetime.now().strftime("logs/log_%Y-%m-%d_%H-%M-%S.log")
+log_filename = datetime.now().strftime(
+    os.path.join(path, "logs", "log_%Y-%m-%d_%H-%M-%S.log")
+)
 
 # Configure logging
 logging.basicConfig(
@@ -138,21 +142,25 @@ def main():
                 cal.add_component(calendar_event)
                 scraped_events_list.append(scraped_event)
 
-    with open("events.json", "w") as json_file:
+    with open(os.path.join(path, "events.json"), "w") as json_file:
         json.dump(scraped_events_list, json_file, indent=4)
 
-    with open("my_calendar.ics", "wb") as f:
+    with open(os.path.join(path, "my_calendar.ics"), "wb") as f:
         f.write(cal.to_ical())
 
 
 def test():
-    return "Test function executed successfully!"
+    Notifier.notify(
+        "Calendar Updated",
+        title="Gotham Volleyball Calendar Update",
+    )
+    logging.info("Running test function...")
 
 
 def check_calendar_diff():
     """Check for differences in the calendar file before and after running main()."""
     try:
-        with open("my_calendar.ics", "rb") as f:
+        with open(os.path.join(path, "my_calendar.ics"), "rb") as f:
             old_calendar = f.read()
     except FileNotFoundError:
         logging.warning("my_calendar.ics not found, assuming no prior calendar.")
@@ -160,18 +168,33 @@ def check_calendar_diff():
 
     main()  # Trigger the main function to update the calendar
 
-    with open("my_calendar.ics", "rb") as f:
+    with open(os.path.join(path, "my_calendar.ics"), "rb") as f:
         new_calendar = f.read()
 
     if old_calendar != new_calendar:
+        Notifier.notify(
+            "The calendar has been updated with new events.",
+            title="Gotham Volleyball Calendar Update",
+        )
         logging.info("Calendar has been updated with new events.")
 
     else:
-        logging.info("No changes detected in the cal1endar.")
+        Notifier.notify(
+            "No changes detected in the calendar.",
+            title="Gotham Volleyball Calendar Update",
+        )
+
+        logging.info("No changes detected in the calendar.")
 
 
-schedule.every().day.at("14:10").do(check_calendar_diff)
-while True:
-    logging.info("schedule running... ")
+schedule.every().day.at("11:00").do(check_calendar_diff)
+while 1:
+    n = schedule.idle_seconds()
+    # if n is None, it means there are no jobs scheduled
+    if n is None:
+        # no more jobs
+        break
+    elif n > 0:
+        # sleep exactly the right amount of time
+        time.sleep(n)
     schedule.run_pending()
-    time.sleep(30 * 60)  # Sleep for 30 minutes
